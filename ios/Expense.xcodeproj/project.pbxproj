@@ -14,6 +14,10 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-Expense-ExpenseTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-Expense-ExpenseTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		BE90D9F3DA5E400FB754614B /* DancingScript-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F4428F4986042B296EB7A1E /* DancingScript-VariableFont_wght.ttf */; };
+		A24AD89E01144A54ADE1C538 /* fff.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C90F29F1FDC4BF79BCC97A4 /* fff.ttf */; };
+		E2F7DDBFBD384F2DAF066A2E /* MsMadi-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 455F5CDF822C4DEAB1981E6A /* MsMadi-Regular.ttf */; };
+		0002BF6343CC4BA7A3AAAF54 /* WaterBrush-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D562E24DE2AC446B99E753AC /* WaterBrush-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Expense/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-Expense-ExpenseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Expense-ExpenseTests.release.xcconfig"; path = "Target Support Files/Pods-Expense-ExpenseTests/Pods-Expense-ExpenseTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		7F4428F4986042B296EB7A1E /* DancingScript-VariableFont_wght.ttf */ = {isa = PBXFileReference; name = "DancingScript-VariableFont_wght.ttf"; path = "../src/assets/fonts/DancingScript-VariableFont_wght.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3C90F29F1FDC4BF79BCC97A4 /* fff.ttf */ = {isa = PBXFileReference; name = "fff.ttf"; path = "../src/assets/fonts/fff.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		455F5CDF822C4DEAB1981E6A /* MsMadi-Regular.ttf */ = {isa = PBXFileReference; name = "MsMadi-Regular.ttf"; path = "../src/assets/fonts/MsMadi-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D562E24DE2AC446B99E753AC /* WaterBrush-Regular.ttf */ = {isa = PBXFileReference; name = "WaterBrush-Regular.ttf"; path = "../src/assets/fonts/WaterBrush-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +130,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				6B688D7BE0C24D2A9179B19D /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -147,6 +156,18 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		6B688D7BE0C24D2A9179B19D /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				7F4428F4986042B296EB7A1E /* DancingScript-VariableFont_wght.ttf */,
+				3C90F29F1FDC4BF79BCC97A4 /* fff.ttf */,
+				455F5CDF822C4DEAB1981E6A /* MsMadi-Regular.ttf */,
+				D562E24DE2AC446B99E753AC /* WaterBrush-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -244,6 +265,10 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				BE90D9F3DA5E400FB754614B /* DancingScript-VariableFont_wght.ttf in Resources */,
+				A24AD89E01144A54ADE1C538 /* fff.ttf in Resources */,
+				E2F7DDBFBD384F2DAF066A2E /* MsMadi-Regular.ttf in Resources */,
+				0002BF6343CC4BA7A3AAAF54 /* WaterBrush-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
