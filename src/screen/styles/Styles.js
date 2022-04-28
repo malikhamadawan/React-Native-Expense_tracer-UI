@@ -55,9 +55,9 @@ const Styles = StyleSheet.create({
   },
   view5: {
     height: (height / 100) * 95,
-    //  backgroundColor: 'blue',
+    // backgroundColor: 'blue',
     alignItems: 'center',
-    // justifyContent: 'space-between',
+    justifyContent: 'space-evenly',
   },
 
   view4: {
@@ -70,15 +70,15 @@ const Styles = StyleSheet.create({
     elevation: 5,
   },
   view7: {
-    height: moderateScale(80),
+    height: moderateScale(140),
     width: (width / 100) * 95,
     backgroundColor: 'white',
-    borderRadius: 30,
+    borderRadius: 20,
     overflow: 'hidden',
     flexDirection: 'row',
     elevation: 5,
-    alignItems: 'center',
-    justifyContent: 'center',
+    // alignItems: 'center',
+    // justifyContent: 'center',
   },
   signUpview: {
     height: (height / 100) * 4,
@@ -167,19 +167,25 @@ const Styles = StyleSheet.create({
     fontSize: Theme.fontSizes.xxmedium,
   },
   nametext: {
-    marginRight: moderateScale(324),
+    marginRight: moderateScale(330),
     marginBottom: 5,
     marginTop: 5,
     fontSize: Theme.fontSizes.xxmedium,
   },
   mobiletext: {
-    marginRight: moderateScale(259),
+    marginRight: moderateScale(261),
     marginBottom: 5,
     marginTop: 5,
     fontSize: Theme.fontSizes.xxmedium,
   },
   confrmtext: {
     marginRight: moderateScale(325),
+    marginBottom: 5,
+    marginTop: 5,
+    fontSize: Theme.fontSizes.xxmedium,
+  },
+  addCardtext: {
+    marginRight: moderateScale(318),
     marginBottom: 5,
     marginTop: 5,
     fontSize: Theme.fontSizes.xxmedium,
