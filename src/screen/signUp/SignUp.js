@@ -38,7 +38,7 @@ export const SignUp = () => {
   };
   return (
     <View style={Styles.container}>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false} >
         <LinearGradient
           start={{x: 0, y: 0}}
           end={{x: 1, y: 0.3}}

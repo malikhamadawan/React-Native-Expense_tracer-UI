@@ -70,8 +70,8 @@ const Styles = StyleSheet.create({
     elevation: 5,
   },
   view7: {
-    height: moderateScale(140),
-    width: (width / 100) * 95,
+    height: moderateScale(150),
+    width: (width / 100) * 90,
     backgroundColor: 'white',
     borderRadius: 20,
     overflow: 'hidden',
@@ -145,57 +145,12 @@ const Styles = StyleSheet.create({
     alignItems: 'center',
     overflow: 'hidden',
   },
-  buttonContainer2: {
-    height: (height / 100) * 10,
-    width: (width / 100) * 100,
-    // backgroundColor: 'green',
-    alignItems: 'center',
-    justifyContent: 'center',
-    overflow: 'hidden',
-  },
   button: {
     height: moderateScale(50),
     width: moderateScale(360),
     alignItems: 'center',
     justifyContent: 'center',
     overflow: 'hidden',
-  },
-  firstnametext: {
-    marginRight: moderateScale(297),
-    marginBottom: 5,
-    marginTop: 5,
-    fontSize: Theme.fontSizes.xxmedium,
-  },
-  nametext: {
-    marginRight: moderateScale(330),
-    marginBottom: 5,
-    marginTop: 5,
-    fontSize: Theme.fontSizes.xxmedium,
-  },
-  mobiletext: {
-    marginRight: moderateScale(261),
-    marginBottom: 5,
-    marginTop: 5,
-    fontSize: Theme.fontSizes.xxmedium,
-  },
-  confrmtext: {
-    marginRight: moderateScale(325),
-    marginBottom: 5,
-    marginTop: 5,
-    fontSize: Theme.fontSizes.xxmedium,
-  },
-  addCardtext: {
-    marginRight: moderateScale(318),
-    marginBottom: 5,
-    marginTop: 5,
-    fontSize: Theme.fontSizes.xxmedium,
-  },
-  passwordtext: {
-    marginRight: moderateScale(315),
-    marginBottom: 5,
-    marginTop: 5,
-    fontSize: Theme.fontSizes.xmedium,
-    
   },
 });
 export default Styles;
