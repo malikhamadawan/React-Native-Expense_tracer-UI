@@ -17,9 +17,10 @@ import ImagePicker from 'react-native-image-crop-picker';
 import Theme from '../../../Theme/Theme';
 const {height, width} = Dimensions.get('window');
 import Styles from '../styles/Styles';
-export const SignUp = () => {
-  const [text, setText] = useState('Add card here');
+export const SignUp = ({navigation}) => {
+  const [text, setText] = useState(require('../../assets/bkimage.png'));
   const [image, setImage] = useState('');
+  const [data, setData] = useState('Add card here');
   const onSelectImage = () => {
     ImagePicker.openPicker({
       multiple: true,
@@ -33,7 +34,7 @@ export const SignUp = () => {
       freeStyleCropEnabled: true,
     }).then(image => {
       setImage(image.path);
-      setText()
+      setData();
     });
   };
   return (
@@ -61,7 +62,7 @@ export const SignUp = () => {
             </View>
             <View style={Styles.view5}>
               {/* first name */}
-              <View style={Styles.view4}>
+              <View style={Styles.view8}>
                 <TextInput
                   placeholder="Enter you first name"
                   style={{
@@ -71,7 +72,7 @@ export const SignUp = () => {
               </View>
 
               {/* last name */}
-              <View style={Styles.view4}>
+              <View style={Styles.view8}>
                 <TextInput
                   placeholder="Enter you last name"
                   style={{
@@ -80,7 +81,7 @@ export const SignUp = () => {
                 />
               </View>
               {/* email id */}
-              <View style={Styles.view4}>
+              <View style={Styles.view8}>
                 <TextInput
                   placeholder="Enter you email id"
                   style={{
@@ -89,7 +90,7 @@ export const SignUp = () => {
                 />
               </View>
               {/* mobile no */}
-              <View style={Styles.view4}>
+              <View style={Styles.view8}>
                 <TextInput
                   placeholder="Enter you mobile number"
                   keyboardType="number-pad"
@@ -99,7 +100,7 @@ export const SignUp = () => {
                 />
               </View>
               {/* password  */}
-              <View style={Styles.view4}>
+              <View style={Styles.view8}>
                 <TextInput
                   placeholder="Enter your Password"
                   secureTextEntry={true}
@@ -109,7 +110,7 @@ export const SignUp = () => {
                 />
               </View>
               {/* confrim  */}
-              <View style={Styles.view4}>
+              <View style={Styles.view8}>
                 <TextInput
                   placeholder="Enter to confirm password "
                   secureTextEntry={true}
@@ -134,7 +135,7 @@ export const SignUp = () => {
                 }}
                 style={Styles.view7}>
                 <ImageBackground
-                  source={image === '' ? setText : {uri: image}}
+                  source={image === '' ? text : {uri: image}}
                   style={{
                     height: '100%',
                     width: '100%',
@@ -145,7 +146,7 @@ export const SignUp = () => {
                   style={{
                     color: 'grey',
                   }}>
-                  {text}
+                    {setImage==='image' ? setData : data}
                 </Text>
                 </ImageBackground>
               </TouchableOpacity>
@@ -153,7 +154,11 @@ export const SignUp = () => {
           </View>
         </LinearGradient>
         <View style={Styles.buttonContainer2}>
-          <TouchableOpacity>
+          <TouchableOpacity
+          onPress={()=>{
+            navigation.navigate('SignIn')
+          }}
+          >
             <LinearGradient
               start={{x: 0, y: 0}}
               end={{x: 1, y: 1}}

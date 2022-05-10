@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Dimensions,
@@ -7,6 +7,7 @@ import {
   ScrollView,
   TextInput,
   TouchableOpacity,
+  Linking,
 } from 'react-native';
 const {height, width} = Dimensions.get('window');
 import Styles from '../styles/Styles';
@@ -18,10 +19,11 @@ import {moderateScale} from '../../../Theme/Dimensions';
 import {LinearTextGradient} from 'react-native-text-gradient';
 import Theme from '../../../Theme/Theme';
 import MaskedView from '@react-native-masked-view/masked-view';
-export const SignIn = () => {
+export const SignIn = ({navigation}) => {
+  const [uri, setUri] = useState('https://www.facebook.com/');
   return (
     <View style={Styles.container}>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <LinearGradient
           start={{x: 0, y: 0}}
           end={{x: 1, y: 0.3}}
@@ -50,16 +52,15 @@ export const SignIn = () => {
                 <View style={Styles.view4}>
                   {/* innerView */}
                   <View style={Styles.innerView}>
-                  <MaskedView
-                  maskElement={<Icons name={'ios-person'} size={30} />}
-                  >
-                    <LinearGradient
-                       start={{x: 1, y: 0}}
-                       end={{x: 1, y: 1}}
-                       colors={['#178BE3FF', '#B054CBFF', '#E98B42FF']}>
+                    <MaskedView
+                      maskElement={<Icons name={'ios-person'} size={30} />}>
+                      <LinearGradient
+                        start={{x: 1, y: 0}}
+                        end={{x: 1, y: 1}}
+                        colors={['#178BE3FF', '#B054CBFF', '#E98B42FF']}>
                         <Icons name={'ios-person'} size={30} />
-                    </LinearGradient>
-                  </MaskedView>
+                      </LinearGradient>
+                    </MaskedView>
                   </View>
                   <TextInput
                     placeholder="User name"
@@ -72,16 +73,17 @@ export const SignIn = () => {
                 <View style={Styles.view4}>
                   {/* innerView */}
                   <View style={Styles.innerView}>
-                  <MaskedView
-                  maskElement={<Icons name={'ios-lock-closed'} opacity={0} size={30} />}
-                  >
-                    <LinearGradient
-                       start={{x: 1, y: 0}}
-                       end={{x: 1, y: 1}}
-                       colors={['#108DECFF', '#B054CBFF', '#E98B42FF']}>
+                    <MaskedView
+                      maskElement={
+                        <Icons name={'ios-lock-closed'} opacity={0} size={30} />
+                      }>
+                      <LinearGradient
+                        start={{x: 1, y: 0}}
+                        end={{x: 1, y: 1}}
+                        colors={['#108DECFF', '#B054CBFF', '#E98B42FF']}>
                         <Icons name={'ios-lock-closed'} size={30} />
-                    </LinearGradient>
-                  </MaskedView>
+                      </LinearGradient>
+                    </MaskedView>
                   </View>
                   <TextInput
                     placeholder="Password"
@@ -91,17 +93,18 @@ export const SignIn = () => {
                   />
                 </View>
                 <TouchableOpacity>
-                <MaskedView
-                  maskElement={<Text style={Styles.text3} >Forgot Password..?</Text>}
-                  >
+                  <MaskedView
+                    maskElement={
+                      <Text style={Styles.text3}>Forgot Password..?</Text>
+                    }>
                     <LinearGradient
-                       start={{x: 0, y: 0}}
-                       end={{x: 1, y: 1}}
-                       colors={['#178BE3FF', '#B054CBFF', '#E98B42FF']}>
-                        <Text style={Styles.text3} >Forgot Password..?</Text>
+                      start={{x: 0, y: 0}}
+                      end={{x: 1, y: 1}}
+                      colors={['#178BE3FF', '#B054CBFF', '#E98B42FF']}>
+                      <Text style={Styles.text3}>Forgot Password..?</Text>
                     </LinearGradient>
                   </MaskedView>
-                  </TouchableOpacity>
+                </TouchableOpacity>
               </View>
 
               <View style={Styles.buttonContainer}>
@@ -118,17 +121,25 @@ export const SignIn = () => {
                 </TouchableOpacity>
                 <View style={Styles.signUpview}>
                   <Text style={Styles.text4}>Still not connected? </Text>
-                  <TouchableOpacity>
-                  <MaskedView
-                  maskElement={<Text style={{fontSize: Theme.fontSizes.xmedium}} >SignUp</Text>}
-                  >
-                    <LinearGradient
-                       start={{x: 0, y: 0}}
-                       end={{x: 1, y: 1}}
-                       colors={['#178BE3FF', '#B054CBFF', '#E98B42FF']}>
-                        <Text style={{fontSize: Theme.fontSizes.xmedium,}} >SignUp</Text>
-                    </LinearGradient>
-                  </MaskedView>
+                  <TouchableOpacity
+                    onPress={() => {
+                      navigation.navigate('SignUp');
+                    }}>
+                    <MaskedView
+                      maskElement={
+                        <Text style={{fontSize: Theme.fontSizes.xmedium}}>
+                          SignUp
+                        </Text>
+                      }>
+                      <LinearGradient
+                        start={{x: 0, y: 0}}
+                        end={{x: 1, y: 1}}
+                        colors={['#178BE3FF', '#B054CBFF', '#E98B42FF']}>
+                        <Text style={{fontSize: Theme.fontSizes.xmedium}}>
+                          SignUp
+                        </Text>
+                      </LinearGradient>
+                    </MaskedView>
                   </TouchableOpacity>
                 </View>
               </View>
@@ -143,17 +154,26 @@ export const SignIn = () => {
             {/* innerSpacer */}
             <View style={Styles.innerSpacer}>
               {/* Gmail */}
-              <TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => {
+                  Linking.openURL(`http://www.gmail.com/`);
+                }}>
                 <Icons name={'logo-google'} color={'red'} size={35} />
               </TouchableOpacity>
 
               {/* Facebook */}
-              <TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => {
+                  Linking.openURL(`http://www.facebook.com/`);
+                }}>
                 <Icon name={'facebook'} color={'blue'} size={35} />
               </TouchableOpacity>
 
               {/* Twitter */}
-              <TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => {
+                  Linking.openURL(`http://www.twitter.com`);
+                }}>
                 <Icon name={'twitter'} color={'skyblue'} size={35} />
               </TouchableOpacity>
             </View>
