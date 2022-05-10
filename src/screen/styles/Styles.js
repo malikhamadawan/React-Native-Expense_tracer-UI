@@ -207,7 +207,7 @@ const Styles = StyleSheet.create({
   },
   flatView: {
     height: (height / 100) * 45,
-    backgroundColor: 'red',
+    // backgroundColor: 'red',
     alignItems: 'center',
     justifyContent: 'center',
   },

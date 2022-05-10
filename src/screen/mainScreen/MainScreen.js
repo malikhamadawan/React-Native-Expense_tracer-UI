@@ -14,7 +14,7 @@ import Icon from 'react-native-vector-icons/FontAwesome5';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Styles from '../styles/Styles';
 const {height, width} = Dimensions.get('window');
-export const MainScreen = () => {
+export const MainScreen = ({navigation}) => {
   return (
     <View style={Styles.mainScreenContainer}>
       <View style={Styles.mainScreenHeader}>
@@ -56,7 +56,11 @@ export const MainScreen = () => {
       </View>
       <View style={Styles.transView}>
         <Text style={Styles.Transcationtext}>Transactions</Text>
-        <TouchableOpacity>
+        <TouchableOpacity
+        onPress={()=>{
+          navigation.navigate('DetailScreen')
+        }}
+        >
           <Text style={Styles.ViewAllText}>View All</Text>
         </TouchableOpacity>
       </View>

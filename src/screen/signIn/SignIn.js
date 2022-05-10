@@ -108,7 +108,11 @@ export const SignIn = ({navigation}) => {
               </View>
 
               <View style={Styles.buttonContainer}>
-                <TouchableOpacity>
+                <TouchableOpacity
+               onPress={() => {
+                navigation.navigate('MyTabs');
+              }}
+                >
                   <LinearGradient
                     start={{x: 0, y: 0}}
                     end={{x: 1, y: 1}}

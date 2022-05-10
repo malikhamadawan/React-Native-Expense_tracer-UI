@@ -34,5 +34,6 @@ export default Theme = {
     small: moderateScale(13),
     verySmall: moderateScale(11),
     tinySmall: moderateScale(9),
+
   },
 };
