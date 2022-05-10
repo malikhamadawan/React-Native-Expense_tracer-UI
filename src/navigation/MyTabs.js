@@ -56,7 +56,7 @@ const MyTabs = () => {
         component={MainScreen}
         options={{
           headerShown: false,
-          tabBarIcon: ({}) => (
+          tabBarIcon: ({focused}) => (
             <Icons name="ios-add" color={'white'} size={45} />
           ),
           tabBarButton: props => <CustomTabNAvigator {...props} />,

@@ -207,10 +207,11 @@ const Styles = StyleSheet.create({
   },
   flatView: {
     height: (height / 100) * 45,
-    // backgroundColor: 'red',
+    backgroundColor: 'red',
     alignItems: 'center',
     justifyContent: 'center',
   },
+
   BurgerView: {
     height: (height / 100) * 10,
     width: (width / 100) * 95,
@@ -223,6 +224,7 @@ const Styles = StyleSheet.create({
     alignItems: 'center',
     // justifyContent: 'center',
   },
+
   ImageView: {
     height: (height / 100) * 8,
     width: (height / 100) * 8,
@@ -237,7 +239,7 @@ const Styles = StyleSheet.create({
     height: (height / 100) * 8,
     width: (height / 100) * 8,
     borderRadius: 45,
-    backgroundColor: '#9D47A7',
+    backgroundColor: '#1154EB',
     alignItems: 'center',
     justifyContent: 'center',
     elevation: 5,

@@ -5,6 +5,7 @@ import {Splash} from '../screen/splash/Splash';
 import {SignIn} from '../screen/signIn/SignIn';
 import {SignUp} from '../screen/signUp/SignUp';
 import MyTabs from './MyTabs';
+import { DetailScreen } from '../screen/detailScreen/DetailScreen';
 
 const Stack = createStackNavigator();
 
@@ -12,6 +13,11 @@ const MyStack = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen
+          name="DetailScreen"
+          component={DetailScreen}
+          options={{headerShown: false}}
+        />
         <Stack.Screen
           name="MyTabs"
           component={MyTabs}
