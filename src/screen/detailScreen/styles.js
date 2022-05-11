@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     elevation: 5,
     alignItems: 'center',
     justifyContent: 'center',
-    marginLeft: moderateScale(20),
+    marginLeft: moderateScale(18),
   },
   sliderButton: {
     height: 45,
