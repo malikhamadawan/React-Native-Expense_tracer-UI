@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     elevation: 5,
     alignItems: 'center',
     justifyContent: 'center',
-    marginLeft: moderateScale(7),
+    marginLeft: moderateScale(20),
   },
   sliderButton: {
     height: 45,
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     elevation: 5,
     alignItems: 'center',
     justifyContent: 'center',
-    marginLeft: moderateScale(165),
+    marginLeft: moderateScale(145),
   },
   ButtonView: {
     height: (height / 100) * 10,
