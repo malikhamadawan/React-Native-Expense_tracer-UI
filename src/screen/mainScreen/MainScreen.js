@@ -13,8 +13,11 @@ import Icons from 'react-native-vector-icons/Ionicons';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Styles from '../styles/Styles';
+import {fname,lname} from '../../redux/reducers';
+import {useSelector} from 'react-redux';
 const {height, width} = Dimensions.get('window');
 export const MainScreen = ({navigation}) => {
+  const {fname}=useSelector(state=>state)
   return (
     <View style={Styles.mainScreenContainer}>
       <View style={Styles.mainScreenHeader}>
@@ -34,7 +37,7 @@ export const MainScreen = ({navigation}) => {
         </View>
         <View style={Styles.mainScreenLeft}>
           <Text style={Styles.WelcomeText}>Welcome!</Text>
-          <Text style={Styles.JohnText}>John Doee</Text>
+          <Text style={Styles.JohnText}>{fname}</Text>
         </View>
         <View style={Styles.mainScreenRight}>
           <View style={Styles.iconView}>
@@ -48,10 +51,9 @@ export const MainScreen = ({navigation}) => {
         <Image
           style={{
             height: 240,
-            width: 500,
+            width: 400,
           }}
           source={require('../../assets/card.png')}
-          // resizeMode={'center'}
         />
       </View>
       <View style={Styles.transView}>

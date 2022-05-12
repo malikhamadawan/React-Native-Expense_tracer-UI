@@ -17,10 +17,35 @@ import ImagePicker from 'react-native-image-crop-picker';
 import Theme from '../../../Theme/Theme';
 const {height, width} = Dimensions.get('window');
 import Styles from '../styles/Styles';
+import {
+  setfName,
+  setlName,
+  setEmail,
+  setMobileNo,
+  setPassword,
+  setConfrimPassword,
+} from '../../redux/actions';
+import {useDispatch} from 'react-redux';
 export const SignUp = ({navigation}) => {
+  const dispatch = useDispatch();
   const [text, setText] = useState(require('../../assets/bkimage.png'));
   const [image, setImage] = useState('');
   const [data, setData] = useState('Add card here');
+  const [firstname, setfirstname] = useState('');
+  const [lastname, setlastname] = useState('');
+  const [emailid, setemailid] = useState('');
+  const [mobilenumber, setmobilenumber] = useState('');
+  const [password, setpassword] = useState('');
+  const [confrimpassword, setconfrimpassword] = useState('');
+
+  const setValues = () => {
+    dispatch(setfName(firstname));
+    dispatch(setlName(lastname));
+    dispatch(setEmail(emailid));
+    dispatch(setMobileNo(mobilenumber));
+    dispatch(setPassword(password));
+    dispatch(setConfrimPassword(confrimpassword));
+  };
   const onSelectImage = () => {
     ImagePicker.openPicker({
       multiple: true,
@@ -39,7 +64,7 @@ export const SignUp = ({navigation}) => {
   };
   return (
     <View style={Styles.container}>
-      <ScrollView showsVerticalScrollIndicator={false} >
+      <ScrollView showsVerticalScrollIndicator={false}>
         <LinearGradient
           start={{x: 0, y: 0}}
           end={{x: 1, y: 0.3}}
@@ -65,6 +90,10 @@ export const SignUp = ({navigation}) => {
               <View style={Styles.view8}>
                 <TextInput
                   placeholder="Enter you first name"
+                  onChangeText={value => {
+                    setfirstname(value);
+                  }}
+                  value={firstname}
                   style={{
                     marginLeft: 15,
                   }}
@@ -75,6 +104,10 @@ export const SignUp = ({navigation}) => {
               <View style={Styles.view8}>
                 <TextInput
                   placeholder="Enter you last name"
+                  onChangeText={value => {
+                    setlastname(value);
+                  }}
+                  value={lastname}
                   style={{
                     marginLeft: 15,
                   }}
@@ -84,6 +117,10 @@ export const SignUp = ({navigation}) => {
               <View style={Styles.view8}>
                 <TextInput
                   placeholder="Enter you email id"
+                  onChangeText={value => {
+                    setemailid(value);
+                  }}
+                  value={emailid}
                   style={{
                     marginLeft: 15,
                   }}
@@ -93,6 +130,10 @@ export const SignUp = ({navigation}) => {
               <View style={Styles.view8}>
                 <TextInput
                   placeholder="Enter you mobile number"
+                  onChangeText={value => {
+                    setmobilenumber(value);
+                  }}
+                  value={mobilenumber}
                   keyboardType="number-pad"
                   style={{
                     marginLeft: 15,
@@ -103,6 +144,10 @@ export const SignUp = ({navigation}) => {
               <View style={Styles.view8}>
                 <TextInput
                   placeholder="Enter your Password"
+                  onChangeText={value => {
+                    setpassword(value);
+                  }}
+                  value={password}
                   secureTextEntry={true}
                   style={{
                     marginLeft: 15,
@@ -113,6 +158,10 @@ export const SignUp = ({navigation}) => {
               <View style={Styles.view8}>
                 <TextInput
                   placeholder="Enter to confirm password "
+                  onChangeText={value => {
+                    setconfrimpassword(value);
+                  }}
+                  value={confrimpassword}
                   secureTextEntry={true}
                   style={{
                     marginLeft: 15,
@@ -142,12 +191,12 @@ export const SignUp = ({navigation}) => {
                     alignItems: 'center',
                     justifyContent: 'center',
                   }}>
-                <Text
-                  style={{
-                    color: 'grey',
-                  }}>
-                    {setImage==='image' ? setData : data}
-                </Text>
+                  <Text
+                    style={{
+                      color: 'grey',
+                    }}>
+                    {setImage === 'image' ? setData : data}
+                  </Text>
                 </ImageBackground>
               </TouchableOpacity>
             </View>
@@ -155,10 +204,10 @@ export const SignUp = ({navigation}) => {
         </LinearGradient>
         <View style={Styles.buttonContainer2}>
           <TouchableOpacity
-          onPress={()=>{
-            navigation.navigate('SignIn')
-          }}
-          >
+            onPress={() => {
+              navigation.navigate('SignIn');
+              setValues();
+            }}>
             <LinearGradient
               start={{x: 0, y: 0}}
               end={{x: 1, y: 1}}

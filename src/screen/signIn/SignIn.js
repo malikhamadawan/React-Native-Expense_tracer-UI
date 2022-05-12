@@ -63,7 +63,7 @@ export const SignIn = ({navigation}) => {
                     </MaskedView>
                   </View>
                   <TextInput
-                    placeholder="User name"
+                    placeholder="email id"
                     placeholderTextColor={'grey'}
                     color={'black'}
                   />

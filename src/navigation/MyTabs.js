@@ -18,7 +18,7 @@ const MyTabs = () => {
         justifyContent: 'center',
         position: 'absolute',
         bottom: 25,
-        left: 20,
+        left: 25,
         right: 20,
       }}
       onPress={onPress}>
@@ -27,7 +27,7 @@ const MyTabs = () => {
         end={{x: 1, y: 0.3}}
         colors={['#178BE3FF', '#B054CBFF', '#E98B42FF']}
         style={{
-            borderRadius: 35,
+            borderRadius: 40,
         }}
         >
       <View
